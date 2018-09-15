@@ -3,7 +3,7 @@ function sortCsvColumns (csv_data) {
 const rows = csv_data.split('\n');
 const unorderedNames = rows[0].split(',');
 const orderedNames = rows[0].split(',').sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-  
+
 const hashNames = {};
 orderedNames.forEach((name,index) => {
   hashNames[index] = name;
@@ -15,7 +15,7 @@ const ordered = [orderedNames.join(',')];
 
     const elements = rows[rowIndex].split(',');
     const row = [];
-    
+
     for(let colIndex = 0 ; colIndex < elements.length ; colIndex++){
       const i = unorderedNames.findIndex(v => v === hashNames[colIndex]);
       row.push(elements[i]);
@@ -25,3 +25,5 @@ const ordered = [orderedNames.join(',')];
   return ordered.join('\n');
 }
 
+
+exports.sortCsvColumns = sortCsvColumns;
