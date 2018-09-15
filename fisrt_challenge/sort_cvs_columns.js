@@ -4,7 +4,6 @@ exports.sortCsvColumns =  (csv_data) => {
     const unorderedNames = rows[0].split(',');
     const orderedNames = rows[0].split(',').sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
-
     const ordered = [orderedNames.join(',')];
 
       for(let rowIndex = 1 ; rowIndex < rows.length ; rowIndex++){

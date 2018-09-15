@@ -1,6 +1,6 @@
 
 let assert = require("chai").assert;
-let {sortCsvColumns} = require('./index');
+let {sortCsvColumns} = require('../index');
 
 
 describe('Challenge', function() {
